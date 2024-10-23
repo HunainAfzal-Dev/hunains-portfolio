@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Sidebar from "./components/sidebar/sidebar";
+import Navbar from "./components/navbar/navbar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,12 +28,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-      // style={{
-      //   background: "radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%)",
-      // }}
+        style={{
+          background:
+            "radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%)",
+        }}
         className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
       >
-        {children}
+        <div className="h-screen md:flex w-full p-8 ">
+          <div className="md:w-1/4 w-full   backdrop-blur-md bg-white/30 rounded-xl ">
+            <Sidebar />
+          </div>
+          <div className="w-[80%] flex flex-col gap-4 px-4">
+            <div className="h-[10%]  w-[100%]  backdrop-blur-md bg-white/30 rounded-xl">
+              <Navbar />
+            </div>
+            <div className="h-[90%] w-[100%] backdrop-blur-md bg-white/30 rounded-xl">
+              {children}
+            </div>
+          </div>
+        </div>
       </body>
     </html>
   );

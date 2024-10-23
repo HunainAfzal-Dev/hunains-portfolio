@@ -11,7 +11,14 @@ const personalData = {
     github: "https://github.com/HunainAfzal-Dev",
     linkedIn: "https://www.linkedin.com/in/hunain-arain-a7945b2b8/",
   },
-  Body: {},
+
+  ProjectsBlock: {
+    title: "Recent Projects",
+    projectCard: {
+      
+    },
+  },
+  SkillBlock: {},
   navbar: {},
 };
 export default personalData;
