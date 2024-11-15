@@ -5,9 +5,14 @@ import CssIcon from "../../public/assets/skills/css1.png";
 import JsIcon from "../../public/assets/skills/java-script.png";
 import TsIcon from "../../public/assets/skills/typescript.png";
 import ReactIcon from "../../public/assets/skills/react.png";
+import ViteIcon from "../../public/assets/skills/vite.png";
 import NextIcon from "../../public/assets/skills/nextjs.png";
 import bootstrapIcon from "../../public/assets/skills/bootStrap.png";
 import tailwindIcon from "../../public/assets/skills/tailwind.png";
+import Firebase from "../../public/assets/skills/firebase.png";
+import Github from "../../public/assets/skills/github.png";
+import Npm from "../../public/assets/skills/npm.png";
+import Pnpm from "../../public/assets/skills/pnpm.png";
 import WordpressIcon from "../../public/assets/skills/wp.png";
 import Shopify from "../../public/assets/skills/shopify.png";
 
@@ -24,11 +29,17 @@ const skills: Skill[] = [
   { name: "JavaScript", image: JsIcon },
   { name: "Typescript", image: TsIcon },
   { name: "ReactJs", image: ReactIcon },
+  { name: "ViteJs", image: ViteIcon },
   { name: "NextJs", image: NextIcon },
-  { name: "bootstrap", image: bootstrapIcon },
-  { name: "tailwind", image: tailwindIcon },
+  { name: "Bootstrap", image: bootstrapIcon },
+  { name: "Tailwind", image: tailwindIcon },
+  { name: "Firebase", image: Firebase },
+  { name: "Github", image: Github },
+  { name: "Npm", image: Npm },
+  { name: "Pnpm", image: Pnpm },
   { name: "Wordpress", image: WordpressIcon },
   { name: "Shopify", image: Shopify },
+  
 ];
 
 const SkillsBox: React.FC = () => {
