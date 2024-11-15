@@ -1,7 +1,5 @@
 "use client";
-import React from "react";
 import HtmlIcon  from "../../public/assets/skills/html-5.png";
-import CssIcon  from "../../public/assets/css.png";
 import JsIcon  from "../../public/assets/skills/java-script.png";
 import Image from "next/image";
 

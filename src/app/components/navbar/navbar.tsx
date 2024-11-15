@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="h-full">
       <ul className="flex gap-6 text-2xl font-semibold justify-center items-center h-full ">
         {navbarItems.map(({ name, path }) => (
-          <li><Link href={path}>{name}</Link></li>
+          <li key={path}><Link  href={path}>{name}</Link></li>
         ))}
       </ul>
     </div>
