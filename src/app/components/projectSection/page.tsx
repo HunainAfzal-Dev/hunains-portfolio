@@ -1,11 +1,12 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 // Define the type for each project
 interface Project {
   title: string;
   role: string;
-  desc: string;
+  desc: any;
   image: string;
 }
 
@@ -16,15 +17,14 @@ const RecentProjects: React.FC = () => {
       title: "Welcome Fuels",
       role: "Frontend Developer",
       desc: "The project is based on WordPress and the website is for a fuel station company.",
-      image:
-        "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      image: "",
     },
     {
       title: "Pandaplcement",
       role: "Frontend Developer",
       desc: "The project is based on WordPress and the website is for a fuel station company.",
       image:
-        "https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+        "",
     },
   ];
 
@@ -93,9 +93,11 @@ const RecentProjects: React.FC = () => {
         </div>
         <div className="relative flex w-full py-5 h-auto overflow-hidden rounded-lg shadow-lg">
           <div className="flex justify-center w-[30%] h-40">
-            <img
+            <Image
               src={projects[currentProject].image}
               alt={projects[currentProject].title}
+              width={100}
+              height={100}
               className="w-full h-auto object-cover rounded-lg"
             />
           </div>
