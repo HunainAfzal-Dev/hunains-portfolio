@@ -46,11 +46,11 @@ const RecentProjects: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white p-6 rounded-xl">
+    <div className="bg-black text-white p-4 rounded-xl">
       <h2 className="text-center text-2xl pb-5 font-bold relative">
         RECENT PROJECTS
       </h2>
-      <div className="border border-white p-6 rounded-lg">
+      <div className="border border-white p-3 rounded-lg">
         <div className="flex gap-5 items-center justify-center">
           <button
             className="bg-white px-2 py-1 rounded text-black hover:bg-black hover:text-white transition-all duration-300 border border-white focus:outline-none"
@@ -91,7 +91,7 @@ const RecentProjects: React.FC = () => {
             </svg>
           </button>
         </div>
-        <div className="relative flex w-full py-10 h-auto overflow-hidden rounded-lg shadow-lg">
+        <div className="relative flex w-full py-5 h-auto overflow-hidden rounded-lg shadow-lg">
           <div className="flex justify-center w-[30%] h-40">
             <img
               src={projects[currentProject].image}
