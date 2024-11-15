@@ -1,11 +1,11 @@
 "use client";
 import HtmlIcon  from "../../public/assets/skills/html-5.png";
 import JsIcon  from "../../public/assets/skills/java-script.png";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Expertise {
   name: string;
-  image: any;
+  image: StaticImageData;
 }
 
 const expertise: Expertise[] = [

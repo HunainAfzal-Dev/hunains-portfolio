@@ -11,11 +11,11 @@ import tailwindIcon from "../../public/assets/skills/tailwind.png";
 import WordpressIcon from "../../public/assets/skills/wp.png";
 import Shopify from "../../public/assets/skills/shopify.png";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Skill {
   name: string;
-  image: any;
+  image: StaticImageData;
 }
 
 const skills: Skill[] = [
@@ -29,8 +29,6 @@ const skills: Skill[] = [
   { name: "tailwind", image: tailwindIcon },
   { name: "Wordpress", image: WordpressIcon },
   { name: "Shopify", image: Shopify },
-  { name: "", image: "" },
-  { name: "", image: "" },
 ];
 
 const SkillsBox: React.FC = () => {

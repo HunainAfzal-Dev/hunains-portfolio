@@ -1,13 +1,13 @@
 "use client";
-import logo from "../../public/assets/32_id_201441.png";
-import Image from "next/image";
+import logo from "../../public/assets/logo.png";
+import Image, { StaticImageData } from "next/image";
 
 // Define the type for the project
 interface Project {
   title: string;
   role: string;
   desc: string;
-  image: any;
+  image: StaticImageData;
   startDate: string;
   endDate: string;
 }
@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
   return (
     <div className="bg-black text-white p-4 rounded-xl">
       <h2 className="text-center text-2xl pb-5 font-bold relative">
-        RECENT PROJECT
+        Experience
       </h2>
       <div className="border border-white rounded-lg">
         <div className="relative flex w-full py-2 h-auto overflow-hidden rounded-lg shadow-lg">
