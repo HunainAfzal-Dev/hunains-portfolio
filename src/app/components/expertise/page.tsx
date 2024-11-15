@@ -1,6 +1,6 @@
 "use client";
-import HtmlIcon  from "../../public/assets/skills/html-5.png";
-import JsIcon  from "../../public/assets/skills/java-script.png";
+import frontEnd  from "../../public/assets/front-end-programming.png";
+import Wordpress  from "../../public/assets/develop.png";
 import Image, { StaticImageData } from "next/image";
 
 interface Expertise {
@@ -9,15 +9,15 @@ interface Expertise {
 }
 
 const expertise: Expertise[] = [
-  { name: "Frontend Development", image: HtmlIcon },
-  { name: "CMS Development", image: JsIcon },
+  { name: "Frontend Development", image: frontEnd },
+  { name: "CMS Development", image: Wordpress },
 ];
 
 const Expertise: React.FC = () => {
   return (
     <div className="bg-black w-full mt-6 h-[30%] overflow-hidden text-white p-4 rounded-xl max-w-lg mx-auto shadow-lg ">
       {/* Heading */}
-      <h2 className="text-3xl font-bold mb-6 text-left">My Skills</h2>
+      <h2 className="text-3xl font-bold mb-6 text-left">My Expertise</h2>
     
       {/* Skills List */}
       <ul className="h-[100%] overflow-scroll" style={{
