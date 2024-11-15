@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import welcomeFuel from  "../../public/assets/project5.fa2e0b4fe7c9915f289d.png"
+import panda from  "../../public/assets/project1.6b964ed67edd8fce4228 (1).png"
+
 
 // Define the type for each project
 interface Project {
   title: string;
   role: string;
-  desc: any;
-  image: string;
+  desc: string;
+  image: any;
 }
 
 const RecentProjects: React.FC = () => {
@@ -17,14 +20,13 @@ const RecentProjects: React.FC = () => {
       title: "Welcome Fuels",
       role: "Frontend Developer",
       desc: "The project is based on WordPress and the website is for a fuel station company.",
-      image: "",
+      image: welcomeFuel,
     },
     {
       title: "Pandaplcement",
       role: "Frontend Developer",
-      desc: "The project is based on WordPress and the website is for a fuel station company.",
-      image:
-        "",
+      desc: "The project is based on ReactJs and it's and job portal website.",
+      image: panda,
     },
   ];
 
