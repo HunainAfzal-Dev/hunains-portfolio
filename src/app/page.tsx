@@ -9,6 +9,7 @@ import iamge from "./public/assets/bottomImage.png";
 
 export default function Home() {
   return (
+    
     <div className="h-full overflow-scroll" style={{ scrollbarWidth: "none" }}>
       <h1
         className="text-2xl p-2 outline-1 font-medium"
