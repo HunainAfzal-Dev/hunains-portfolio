@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import welcomeFuel from  "../../public/assets/project1.png"
-import panda from  "../../public/assets/project5.png"
+import welcomeFuel from "../../public/assets/project1.png"
+import panda from "../../public/assets/project5.png"
 import { StaticImageData } from "next/image";
 
 
@@ -49,7 +49,7 @@ const RecentProjects: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white p-4 rounded-xl">
+    <div className="bg-black/80 text-white p-2 rounded-xl">
       <h2 className="text-center text-2xl pb-5 font-bold relative">
         RECENT PROJECTS
       </h2>
@@ -94,8 +94,8 @@ const RecentProjects: React.FC = () => {
             </svg>
           </button>
         </div>
-        <div className="relative flex w-full py-5 h-auto overflow-hidden rounded-lg shadow-lg">
-          <div className="flex justify-center w-[30%] h-40">
+        <div className="relative md:flex w-full py-5 h-auto overflow-hidden rounded-lg shadow-lg">
+          <div className="flex justify-center md:w-[30%] h-40">
             <Image
               src={projects[currentProject].image}
               alt={projects[currentProject].title}
@@ -104,7 +104,7 @@ const RecentProjects: React.FC = () => {
               className="w-full h-auto object-cover rounded-lg"
             />
           </div>
-          <div className="text-left mt-4 w-[70%] px-10">
+          <div className="text-left mt-4 md:w-[70%] md:px-10">
             <h3 className="text-2xl font-semibold">
               {projects[currentProject].title}
             </h3>

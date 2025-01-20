@@ -3,7 +3,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Sidebar from "./components/sidebar/sidebar";
 import Navbar from "./components/navbar/navbar";
-import CursorTrailCanvas from "./components/cursor-trail-canvar";
 import { AnimatePresence } from "framer-motion";
 
 const geistSans = localFont({
@@ -30,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <AnimatePresence mode="wait" initial={false}>
-        <CursorTrailCanvas className="pointer-events-none fixed inset-0 z-10 h-full w-full" />
         <body
           style={{
             background:
@@ -38,11 +36,11 @@ export default function RootLayout({
           }}
           className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
         >
-          <div className="h-screen md:flex w-full p-8 ">
+          <div className="h-screen md:flex w-full p-3 md:p-8 ">
             <div className="md:w-1/4 w-full   backdrop-blur-md bg-white/30 rounded-xl ">
               <Sidebar />
             </div>
-            <div className="w-[80%] flex flex-col gap-4 px-4">
+            <div className="md:w-[80%] flex flex-col gap-4 md:px-4">
               <div className="h-[10%]  w-[100%]  backdrop-blur-md bg-white/30 rounded-xl">
                 <Navbar />
               </div>

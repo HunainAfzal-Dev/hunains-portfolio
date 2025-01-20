@@ -24,20 +24,21 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <div className="bg-black text-white p-4 rounded-xl">
+    <div className="bg-black/80 text-white p-2 rounded-xl">
       <h2 className="text-center text-2xl pb-5 font-bold relative">
         Experience
       </h2>
       <div className="border border-white rounded-lg">
-        <div className="relative flex w-full py-2 h-auto overflow-hidden rounded-lg shadow-lg">
-          <div className="flex justify-center w-[30%] h-40">
+        <div className="relative flex gap-4 justify-center  items-center  w-full px-2 h-auto overflow-hidden rounded-lg shadow-lg">
+          <div className="flex items-center w-[30%] h-40">
             <Image
               src={project.image}
               alt={project.title}
-              className="w-full h-auto object-cover rounded-lg"
+              className="w-full object-cover h-fit border md:border-none rounded-full px-4"
             />
           </div>
-          <div className="text-left mt-4 w-[70%] px-10">
+          <div className="
+          text-left mt-4 w-[70%] px-3 md:px-10">
             <h3 className="text-2xl font-semibold">{project.title}</h3>
             <p className="text-md text-gray-400">{project.role}</p>
             <p className="mt-2">{project.desc}</p>
