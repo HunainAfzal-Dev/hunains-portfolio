@@ -24,36 +24,33 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <div className="bg-black/80 text-white p-2 rounded-xl">
-      <h2 className="text-center text-2xl pb-5 font-bold relative">
-        Experience
-      </h2>
-      <div className="border border-white rounded-lg">
-        <div className="relative flex gap-4 justify-center  items-center  w-full px-2 h-auto overflow-hidden rounded-lg shadow-lg">
-          <div className="flex items-center w-[30%] h-40">
-            <Image
-              src={project.image}
-              alt={project.title}
-              className="w-full object-cover h-fit border md:border-none rounded-full px-4"
-            />
-          </div>
-          <div className="
-          text-left mt-4 w-[70%] px-3 md:px-10">
-            <h3 className="text-2xl font-semibold">{project.title}</h3>
-            <p className="text-md text-gray-400">{project.role}</p>
-            <p className="mt-2">{project.desc}</p>
-            <div className="mt-4 text-sm text-gray-500">
-              <p>
-                <strong>Start Date:</strong> {project.startDate}
-              </p>
-              <p>
-                <strong>End Date:</strong> {project.endDate}
-              </p>
-            </div>
+    <section className="bg-black/80 text-white p-2 rounded-xl shadow-lg max-w-3xl">
+      <h2 className="text-center text-2xl pb-6 font-bold">Experience</h2>
+
+      <div className="border border-white rounded-lg p-3">
+        {/* Heading and Image Row */}
+        <div className="flex items-center gap-4">
+          <Image
+            src={project.image}
+            alt={project.title}
+            className="w-24 h-24 object-contain"
+          />
+          <h3 className="text-2xl font-semibold">{project.title}</h3>
+        </div>
+
+        {/* Content Section */}
+        <div className=" text-left">
+          <p className="text-[16px] text-gray-400">{project.role}</p>
+          <p className=" mt-4">{project.desc}</p>
+          <div className="mt-4 text-sm text-gray-400 space-y-1">
+            <p>
+              <strong>Start Date:</strong> {project.startDate}
+            </p>
+            <p><strong>End Date:</strong> {project.endDate}</p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -16,19 +16,19 @@ export default function Home() {
         Crafting pixel-perfect interfaces and bringing designs to life, one line
         of code at a time.
       </h1>
-      <div className="px-3 flex flex-col md:flex-row gap-5 mt-28 w-full">
+      <div className="p-3 flex flex-col md:flex-row gap-5 mt-24 w-full">
         <div className="md:w-[65%] h-full gap-5 flex flex-col">
           <RecentProjects />
           <Experience />
         </div>
-        <div className="w-[35%] h-full flex flex-col ">
+        <div className="md:w-[35%] h-full flex flex-col ">
           <SkillsBox />
           <Expertise />
           <div className="">
             <Image
               src={iamge}
               alt={"bottom image"}
-              className="  object-contain"
+              className="p-16 md:px-16 md:py-4 object-contain"
             />
           </div>
         </div>

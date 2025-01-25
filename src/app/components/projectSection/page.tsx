@@ -1,10 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import welcomeFuel from "../../public/assets/project1.png"
-import panda from "../../public/assets/project5.png"
+import welcomeFuel from "../../public/assets/project1.png";
+import panda from "../../public/assets/project5.png";
 import { StaticImageData } from "next/image";
-
 
 // Define the type for each project
 interface Project {
@@ -49,12 +48,11 @@ const RecentProjects: React.FC = () => {
   };
 
   return (
-    <div className="bg-black/80 text-white p-2 rounded-xl">
-      <h2 className="text-center text-2xl pb-5 font-bold relative">
-        RECENT PROJECTS
-      </h2>
+    <div className="bg-black/80 text-white p-2 rounded-xl max-w-3xl ">
+      <h2 className="text-center text-2xl pb-5 font-bold">Recent Projects</h2>
       <div className="border border-white p-3 rounded-lg">
-        <div className="flex gap-5 items-center justify-center">
+        {/* Navigation Buttons */}
+        <div className="flex gap-5 items-center justify-end ">
           <button
             className="bg-white px-2 py-1 rounded text-black hover:bg-black hover:text-white transition-all duration-300 border border-white focus:outline-none"
             onClick={handlePrevProject}
@@ -94,24 +92,31 @@ const RecentProjects: React.FC = () => {
             </svg>
           </button>
         </div>
-        <div className="relative md:flex w-full py-5 h-auto overflow-hidden rounded-lg shadow-lg">
-          <div className="flex justify-center md:w-[30%] h-40">
-            <Image
-              src={projects[currentProject].image}
-              alt={projects[currentProject].title}
-              width={100}
-              height={100}
-              className="w-full h-auto object-cover rounded-lg"
-            />
+        {/* Project Display */}
+        <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
+          {/* Heading and Image Row */}
+          <div className="flex items-center gap-4">
+            <div className="flex justify-center w-32 h-32">
+              <Image
+                src={projects[currentProject].image}
+                alt={projects[currentProject].title}
+                className="w-full h-auto object-contain rounded-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">
+                {projects[currentProject].title}
+              </h3>
+              <p className="text-md text-gray-400">
+                {projects[currentProject].role}
+              </p>
+            </div>
           </div>
-          <div className="text-left mt-4 md:w-[70%] md:px-10">
-            <h3 className="text-2xl font-semibold">
-              {projects[currentProject].title}
-            </h3>
-            <p className="text-md text-gray-400">
-              {projects[currentProject].role}
-            </p>
-            <p className="mt-2">{projects[currentProject].desc}</p>
+
+          {/* Content Section */}
+          <div className="mt-2 text-left">
+
+            <p className="text-sm">{projects[currentProject].desc}</p>
           </div>
         </div>
       </div>
@@ -120,6 +125,3 @@ const RecentProjects: React.FC = () => {
 };
 
 export default RecentProjects;
-
-
-// absolute top-0 right-0 transform -translate-x-1/2 -translate-y-1/2
