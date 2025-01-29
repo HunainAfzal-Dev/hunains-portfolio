@@ -1,14 +1,18 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import welcomeFuel from "../../public/assets/project1.png";
-import panda from "../../public/assets/project5.png";
+import panda from "../../public/assets/project1.png";
+import welcomeFuel from "../../public/assets/project5.png";
+import Atai from "../../public/assets/atai.png";
+
 import { StaticImageData } from "next/image";
+import { HiOutlineViewfinderCircle } from "react-icons/hi2";
 
 // Define the type for each project
 interface Project {
   title: string;
   role: string;
+  Link: string;
   desc: string;
   image: StaticImageData;
 }
@@ -17,16 +21,25 @@ const RecentProjects: React.FC = () => {
   // Define the projects array with proper typing
   const projects: Project[] = [
     {
-      title: "Welcome Fuels",
+      title: "Welcome Fuels – WordPress Website",
       role: "Frontend Developer",
-      desc: "The project is based on WordPress and the website is for a fuel station company.",
+      Link: "https://welcomefuels.com/",
+      desc: "Website for Welcome Fuels, a US-based fueling company. This project, completed during my time at 'Kaj Consultancy', showcases various services through a custom post-type setup, ensuring easy content management. The website is designed for a seamless user experience, highlighting the company's offerings effectively",
       image: welcomeFuel,
     },
     {
-      title: "Pandaplcement",
+      title: "Pandaplcement – Job portal Website",
       role: "Frontend Developer",
-      desc: "The project is based on ReactJs and the purpose  station company.",
+      Link: "https://pandaplacement.com/#/home",
+      desc: `In my recent projects at 'Kaj Consulatancy', we developed a job portal that efficiently connects job seekers and employers. I created user-friendly interfaces for profile building, CV generation, and job applications. Employers can create profiles, post jobs, and manage applications. The project is nearing completion and is set to meet all client requirements, positioning it for a successful launch. Must vist:${<a href="https://pandaplacement.com/#/home">Pandaplacement</a>} `,
       image: panda,
+    },
+    {
+      title: "ATAI Construction – WordPress Website",
+      role: "Frontend Developer",
+      Link: "https://atai.zenkode.tech/",
+      desc: "Developed a professional WordPress site for ATAI Construction, a US-based company specializing in large-scale projects. This project, completed during my time at 'Kaj Consultancy', the site highlights their portfolio and significant construction projects with a focus on a user-friendly design and organized presentation.",
+      image: Atai,
     },
   ];
 
@@ -51,6 +64,41 @@ const RecentProjects: React.FC = () => {
     <div className="bg-black/80 text-white p-2 rounded-xl max-w-3xl ">
       <h2 className="text-center text-2xl pb-5 font-bold">Recent Projects</h2>
       <div className="border border-white p-3 rounded-lg">
+
+        {/* Project Display */}
+        <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
+          <span className="">
+            <a target="_blank" href={projects[currentProject].Link} className="flex items-center gap-1 justify-end text-[10px]  text-gray-400">
+              <HiOutlineViewfinderCircle className=" hover:scale-75 text-md" />
+              Must Visit
+            </a>
+          </span>
+
+
+          {/* Heading and Image Row */}
+          <div className="flex items-center gap-4">
+            <div className="flex justify-center w-32 h-32">
+              <Image
+                src={projects[currentProject].image}
+                alt={projects[currentProject].title}
+                className="w-full h-auto object-contain rounded-lg"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold">
+                {projects[currentProject].title}
+              </h3>
+              <p className="text-md text-gray-400">
+                {projects[currentProject].role}
+              </p>
+
+            </div>
+          </div>
+          {/* Content Section */}
+          <div className="mt-2 text-left">
+            <p className="text-sm">{projects[currentProject].desc}</p>
+          </div>
+        </div>
         {/* Navigation Buttons */}
         <div className="flex gap-5 items-center justify-end ">
           <button
@@ -91,33 +139,6 @@ const RecentProjects: React.FC = () => {
               />
             </svg>
           </button>
-        </div>
-        {/* Project Display */}
-        <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
-          {/* Heading and Image Row */}
-          <div className="flex items-center gap-4">
-            <div className="flex justify-center w-32 h-32">
-              <Image
-                src={projects[currentProject].image}
-                alt={projects[currentProject].title}
-                className="w-full h-auto object-contain rounded-lg"
-              />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold">
-                {projects[currentProject].title}
-              </h3>
-              <p className="text-md text-gray-400">
-                {projects[currentProject].role}
-              </p>
-            </div>
-          </div>
-
-          {/* Content Section */}
-          <div className="mt-2 text-left">
-
-            <p className="text-sm">{projects[currentProject].desc}</p>
-          </div>
         </div>
       </div>
     </div>
