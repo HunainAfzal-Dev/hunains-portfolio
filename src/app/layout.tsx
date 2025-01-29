@@ -31,20 +31,21 @@ export default function RootLayout({
       <AnimatePresence mode="wait" initial={false}>
         <body
           style={{
+            height: "100vh",
             background:
               "radial-gradient(circle at -8.9% 51.2%, rgb(255, 124, 0) 0%, rgb(255, 124, 0) 15.9%, rgb(255, 163, 77) 15.9%, rgb(255, 163, 77) 24.4%, rgb(19, 30, 37) 24.5%, rgb(19, 30, 37) 66%)",
           }}
           className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
         >
-          <div className="h-screen md:flex w-full p-3 md:p-8 ">
-            <div className="md:w-1/4 w-full   backdrop-blur-md bg-white/30 rounded-xl ">
+          <div className="h-screen  md:flex w-full p-3 md:p-8 ">
+            <div className="md:w-1/4 w-full   backdrop-blur-md bg-white/5 rounded-xl ">
               <Sidebar />
             </div>
             <div className="md:w-[80%] flex flex-col gap-4 md:px-4">
-              <div className="h-[10%]  w-[100%]  backdrop-blur-md bg-white/30 rounded-xl">
+              <div className="h-[10%]  w-[100%]  backdrop-blur-md bg-white/5 rounded-xl">
                 <Navbar />
               </div>
-              <div className="h-[90%] w-[100%] backdrop-blur-md bg-white/30 rounded-xl">
+              <div className="h-[90%] w-[100%] backdrop-blur-md bg-white/5 rounded-xl">
                 {children}
               </div>
             </div>
