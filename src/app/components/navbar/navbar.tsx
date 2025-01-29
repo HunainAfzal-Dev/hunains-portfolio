@@ -12,7 +12,7 @@ const navbarItems = [
 
 const Navbar = () => {
   return (
-    <div className="h-full w-full  hidden md:block">
+    <div className="h-full w-full  hidden md:block [text-shadow:2px_2px_4px_rgba(0,0,0,1 )] text-white">
       <ul className="flex gap-6 text-2xl font-semibold justify-center items-center h-full ">
         {navbarItems.map(({ name, path }) => (
           <li key={path}><Link href={path}>{name}</Link></li>

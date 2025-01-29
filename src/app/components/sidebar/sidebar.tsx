@@ -28,7 +28,7 @@ const SocialIcons: SocialIcons[] = [
 const Sidebar = () => {
 
   return (
-    <div className="p-4 rounded-md shadow-md h-full max-w-sm mx-auto">
+    <div className="[text-shadow:2px_2px_4px_rgba(0,0,0,1)] allText p-4 rounded-md shadow-md h-full max-w-sm mx-auto text-white">
       <div className="w-full h-40 rounded-lg bg-gray-300 mx-auto mb-4 overflow-hidden">
         <Image
           alt="Hunain Afzal"
