@@ -4,6 +4,7 @@ import React from "react";
 const navbarItems = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
+  { name: "Projects", path: "/all-projects" },
   { name: "Education", path: "/education" },
   { name: "Skills", path: "/skills" },
   { name: "Experience", path: "/experience" },

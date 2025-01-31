@@ -31,7 +31,7 @@ const RecentProjects: React.FC = () => {
       title: "Pandaplcement – Job portal Website",
       role: "Frontend Developer",
       Link: "https://pandaplacement.com/#/home",
-      desc: `In my recent projects at 'Kaj Consulatancy', we developed a job portal that efficiently connects job seekers and employers. I created user-friendly interfaces for profile building, CV generation, and job applications. Employers can create profiles, post jobs, and manage applications. The project is nearing completion and is set to meet all client requirements, positioning it for a successful launch. Must vist:${<a href="https://pandaplacement.com/#/home">Pandaplacement</a>} `,
+      desc: `In my recent projects at 'Kaj Consulatancy', we developed a job portal that efficiently connects job seekers and employers. I created user-friendly interfaces for profile building, CV generation, and job applications. Employers can create profiles, post jobs, and manage applications. The project is nearing completion and is set to meet all client requirements, positioning it for a successful launch. Must vist`,
       image: panda,
     },
     {
@@ -39,6 +39,13 @@ const RecentProjects: React.FC = () => {
       role: "Frontend Developer",
       Link: "https://atai.zenkode.tech/",
       desc: "Developed a professional WordPress site for ATAI Construction, a US-based company specializing in large-scale projects. This project, completed during my time at 'Kaj Consultancy', the site highlights their portfolio and significant construction projects with a focus on a user-friendly design and organized presentation.",
+      image: Atai,
+    },
+    {
+      title: "Kurani Gruop – WordPress Website",
+      role: "Frontend Developer",
+      Link: "https://kurani.zenkode.tech/",
+      desc: "This WordPress website for Kurani Group was created during my time at Kaj Consultancy. It was developed without using any pre-built themes, instead utilizing custom blocks for a fully personalized design. The project highlights my ability to deliver tailored WordPress solutions, ensuring the website is both functional and aligned with the brand's growth in the restaurant industry.",
       image: Atai,
     },
   ];
@@ -61,7 +68,7 @@ const RecentProjects: React.FC = () => {
   };
 
   return (
-    <div className="bg-black/80 text-white p-2 rounded-xl max-w-3xl ">
+    <div className="bg-white/5 text-white p-2 rounded-xl max-w-3xl ">
       <h2 className="text-center text-2xl pb-5 font-bold">Recent Projects</h2>
       <div className="border border-white p-3 rounded-lg">
 

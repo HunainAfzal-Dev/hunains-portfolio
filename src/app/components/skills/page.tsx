@@ -39,7 +39,6 @@ const skills: Skill[] = [
   { name: "Pnpm", image: Pnpm },
   { name: "Wordpress", image: WordpressIcon },
   { name: "Shopify", image: Shopify },
-  
 ];
 
 const SkillsBox: React.FC = () => {
@@ -52,8 +51,8 @@ const SkillsBox: React.FC = () => {
       <ul
         className="overflow-scroll pr-1 h-[200px]"
         style={{
-          "scrollBehavior" : "smooth",
-          "scrollbarWidth" : "none",
+          "scrollBehavior": "smooth",
+          "scrollbarWidth": "none",
           "borderRight": "solid 2px white"
 
         }}
