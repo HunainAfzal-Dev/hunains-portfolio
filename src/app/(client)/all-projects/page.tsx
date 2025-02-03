@@ -136,14 +136,11 @@ const Projects: React.FC = () => {
   return (
     <section id="portfolio" className="py-16 ">
       <div className="container mx-auto px-4 text-center">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <h2
           className="text-4xl font-bold mb-4"
         >
           Portfolio
-        </motion.h2>
+        </h2>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}

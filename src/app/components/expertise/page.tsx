@@ -15,7 +15,7 @@ const expertise: Expertise[] = [
 
 const Expertise: React.FC = () => {
   return (
-    <div className="bg-black/80 w-full mt-6 h-[30%] overflow-hidden text-white p-4 rounded-xl max-w-lg mx-auto shadow-lg ">
+    <div className="bg-white/5 w-full mt-6 h-[30%] overflow-hidden text-white p-4 rounded-xl max-w-lg mx-auto shadow-lg ">
       {/* Heading */}
       <h2 className="text-3xl font-bold mb-6 text-left">My Expertise</h2>
     

@@ -24,7 +24,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section className="bg-/5 text-white p-2 rounded-xl shadow-lg max-w-3xl">
+    <section className="bg-white/5 text-white p-2 rounded-xl shadow-lg max-w-3xl">
       <h2 className="text-center text-2xl pb-6 font-bold">Experience</h2>
 
       <div className="border border-white rounded-lg p-3">

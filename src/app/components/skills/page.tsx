@@ -43,7 +43,7 @@ const skills: Skill[] = [
 
 const SkillsBox: React.FC = () => {
   return (
-    <div className="bg-black/80 w-full h-full overflow-hidden text-white p-4 rounded-xl max-w-lg mx-auto shadow-lg ">
+    <div className="bg-white/5 w-full h-full overflow-hidden text-white p-4 rounded-xl max-w-lg mx-auto shadow-lg ">
       {/* Heading */}
       <h2 className="text-3xl font-bold mb-6 text-left">My Skills</h2>
 
