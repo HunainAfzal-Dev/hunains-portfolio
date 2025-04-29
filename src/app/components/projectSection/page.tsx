@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import panda from "../../public/assets/project1.png";
 import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
+import kurani from "../../public/assets/kurani.png";
+import kaj from "../../public/assets/kaj.png";
 
 import { StaticImageData } from "next/image";
 import { HiOutlineViewfinderCircle } from "react-icons/hi2";
@@ -18,7 +20,8 @@ interface Project {
 }
 
 const RecentProjects: React.FC = () => {
-  // Define the projects array with proper typing
+  const [animate, setAnimate] = useState<boolean>(false);
+  const [currentProject, setCurrentProject] = useState<number>(0);
   const projects: Project[] = [
     {
       title: "Welcome Fuels – WordPress Website",
@@ -44,43 +47,57 @@ const RecentProjects: React.FC = () => {
     {
       title: "Kurani Gruop – WordPress Website",
       role: "Frontend Developer",
-      Link: "https://kurani.zenkode.tech/",
+      Link: "https://kuranigroup.com/",
       desc: "This WordPress website for Kurani Group was created during my time at Kaj Consultancy. It was developed without using any pre-built themes, instead utilizing custom blocks for a fully personalized design. The project highlights my ability to deliver tailored WordPress solutions, ensuring the website is both functional and aligned with the brand's growth in the restaurant industry.",
-      image: Atai,
+      image: kurani,
+    },
+    {
+      title: "Kaj Consultancy  – Portfolio Website",
+      role: "Frontend Developer",
+      Link: "https://kaj-consultancy.com/",
+      desc: "Just wrapped up another awesome project at Kaj Consultancy! 🎉 Designed and developed their official website from scratch using React. Clean UI, smooth interactions, and fully responsive—built to represent the brand with style and speed! 🚀",
+      image: kaj,
     },
   ];
 
-  // Define the state with proper type
-  const [currentProject, setCurrentProject] = useState<number>(0);
 
-  // Function to handle previous project navigation
-  const handlePrevProject = (): void => {
-    setCurrentProject((prevProject) =>
-      prevProject === 0 ? projects.length - 1 : prevProject - 1
-    );
+  const handlePrevProject = () => {
+    setAnimate(true);
+    setTimeout(() => {
+      setCurrentProject((prev) => (prev === 0 ? projects.length - 1 : prev - 1));
+      setAnimate(false);
+    }, 300); // match with CSS animation duration
   };
 
-  // Function to handle next project navigation
-  const handleNextProject = (): void => {
-    setCurrentProject((prevProject) =>
-      prevProject === projects.length - 1 ? 0 : prevProject + 1
-    );
+  const handleNextProject = () => {
+    setAnimate(true);
+    setTimeout(() => {
+      setCurrentProject((prev) => (prev === projects.length - 1 ? 0 : prev + 1));
+      setAnimate(false);
+    }, 300);
   };
+
 
   return (
     <div className="bg-white/5 text-white p-2 rounded-xl max-w-3xl ">
       <h2 className="text-center text-2xl pb-5 font-bold">Recent Projects</h2>
       <div className="border border-white p-3 rounded-lg">
 
-        {/* Project Display */}
-        <div className="relative w-full h-auto overflow-hidden rounded-lg shadow-lg">
+        {/* Project Display with animation */}
+        <div
+          className={`transition-all duration-500 ease-in-out transform ${animate ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
+            } relative w-full h-auto overflow-hidden rounded-lg `}
+        >
           <span className="">
-            <a target="_blank" href={projects[currentProject].Link} className="flex items-center gap-1 justify-end text-[10px]  text-gray-400">
+            <a
+              target="_blank"
+              href={projects[currentProject].Link}
+              className="flex items-center gap-1 justify-end text-[10px]  text-gray-400"
+            >
               <HiOutlineViewfinderCircle className=" hover:scale-75 text-md" />
               Must Visit
             </a>
           </span>
-
 
           {/* Heading and Image Row */}
           <div className="flex items-center gap-4">
@@ -98,14 +115,18 @@ const RecentProjects: React.FC = () => {
               <p className="text-md text-gray-400">
                 {projects[currentProject].role}
               </p>
-
             </div>
           </div>
+
           {/* Content Section */}
           <div className="mt-2 text-left">
-            <p className="text-sm">{projects[currentProject].desc}</p>
+            <p className="text-sm h-[100px] overflow-hidden text-ellipsis leading-snug">
+              {projects[currentProject].desc}
+            </p>
           </div>
+
         </div>
+
         {/* Navigation Buttons */}
         <div className="flex gap-5 items-center justify-end ">
           <button
