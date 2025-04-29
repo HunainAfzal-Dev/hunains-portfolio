@@ -1,7 +1,6 @@
 "use client";
 
-import { StaticImageData } from "next/image";
-import React, { useState } from "react";
+import React from "react";
 // import Image, { StaticImageData } from "next/image";
 // import { motion, AnimatePresence } from "framer-motion";
 // import { Swiper, SwiperSlide } from "swiper/react";
