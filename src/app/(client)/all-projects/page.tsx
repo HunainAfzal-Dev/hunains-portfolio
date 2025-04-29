@@ -1,137 +1,138 @@
 "use client";
 
+import { StaticImageData } from "next/image";
 import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import panda from "../../public/assets/project1.png";
-import welcomeFuel from "../../public/assets/project5.png";
-import Atai from "../../public/assets/atai.png";
+// import Image, { StaticImageData } from "next/image";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation, Pagination } from "swiper/modules";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import panda from "../../public/assets/project1.png";
+// import welcomeFuel from "../../public/assets/project5.png";
+// import Atai from "../../public/assets/atai.png";
 
 // Define the portfolio item type
-type PortfolioItem = {
-  id: number;
-  category: string;
-  title: string;
-  description: string;
-  images: StaticImageData[]; // Array of images for each project
-  link?: string; // Optional link for the project
-};
+// type PortfolioItem = {
+//   id: number;
+//   category: string;
+//   title: string;
+//   description: string;
+//   images: StaticImageData[]; // Array of images for each project
+//   link?: string; // Optional link for the project
+// };
 
 // Sample portfolio data with multiple images
-const portfolioItems: PortfolioItem[] = [
-  {
-    id: 1,
-    category: "app",
-    title: "App 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [panda, welcomeFuel, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 2,
-    category: "product",
-    title: "Product 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [welcomeFuel, panda, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 3,
-    category: "branding",
-    title: "Branding 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [Atai, welcomeFuel, panda],
-    link: "https://example.com",
-  },
-  {
-    id: 1,
-    category: "app",
-    title: "App 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [panda, welcomeFuel, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 2,
-    category: "product",
-    title: "Product 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [welcomeFuel, panda, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 3,
-    category: "branding",
-    title: "Branding 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [Atai, welcomeFuel, panda],
-    link: "https://example.com",
-  },
-  {
-    id: 1,
-    category: "app",
-    title: "App 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [panda, welcomeFuel, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 2,
-    category: "product",
-    title: "Product 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [welcomeFuel, panda, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 3,
-    category: "branding",
-    title: "Branding 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [Atai, welcomeFuel, panda],
-    link: "https://example.com",
-  },
-  {
-    id: 4,
-    category: "app",
-    title: "App 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [panda, welcomeFuel, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 5,
-    category: "product",
-    title: "Product 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [welcomeFuel, panda, Atai],
-    link: "https://example.com",
-  },
-  {
-    id: 6,
-    category: "branding",
-    title: "Branding 1",
-    description: "Lorem ipsum, dolor sit amet consectetur",
-    images: [Atai, welcomeFuel, panda],
-    link: "https://example.com",
-  },
-  // Add more items as needed
-];
+// const portfolioItems: PortfolioItem[] = [
+//   {
+//     id: 1,
+//     category: "app",
+//     title: "App 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [panda, welcomeFuel, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 2,
+//     category: "product",
+//     title: "Product 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [welcomeFuel, panda, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 3,
+//     category: "branding",
+//     title: "Branding 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [Atai, welcomeFuel, panda],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 1,
+//     category: "app",
+//     title: "App 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [panda, welcomeFuel, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 2,
+//     category: "product",
+//     title: "Product 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [welcomeFuel, panda, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 3,
+//     category: "branding",
+//     title: "Branding 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [Atai, welcomeFuel, panda],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 1,
+//     category: "app",
+//     title: "App 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [panda, welcomeFuel, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 2,
+//     category: "product",
+//     title: "Product 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [welcomeFuel, panda, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 3,
+//     category: "branding",
+//     title: "Branding 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [Atai, welcomeFuel, panda],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 4,
+//     category: "app",
+//     title: "App 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [panda, welcomeFuel, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 5,
+//     category: "product",
+//     title: "Product 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [welcomeFuel, panda, Atai],
+//     link: "https://example.com",
+//   },
+//   {
+//     id: 6,
+//     category: "branding",
+//     title: "Branding 1",
+//     description: "Lorem ipsum, dolor sit amet consectetur",
+//     images: [Atai, welcomeFuel, panda],
+//     link: "https://example.com",
+//   },
+//   // Add more items as needed
+// ];
 
 const Projects: React.FC = () => {
-  const [activeFilter, setActiveFilter] = useState("*");
-  const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
+  // const [activeFilter, setActiveFilter] = useState("*");
+  // const [selectedProject, setSelectedProject] = useState<PortfolioItem | null>(null);
 
   // Filter portfolio items based on the selected category
-  const filteredItems =
-    activeFilter === "*"
-      ? portfolioItems
-      : portfolioItems.filter((item) => item.category === activeFilter);
+  // const filteredItems =
+  //   activeFilter === "*"
+  //     ? portfolioItems
+  //     : portfolioItems.filter((item) => item.category === activeFilter);
 
   return (
     // <section id="portfolio" className="py-16 ">
