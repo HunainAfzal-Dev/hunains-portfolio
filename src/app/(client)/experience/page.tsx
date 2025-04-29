@@ -2,9 +2,9 @@ import React from 'react'
 
 const Experience = () => {
   return (
-    <div>
-      This is Experience Section
-    </div>
+    <div className='h-[70vh] flex item-center justify-center'>
+    <div className='flex items-center justify-center'>Comming Soon...</div>
+</div>
   )
 }
 
