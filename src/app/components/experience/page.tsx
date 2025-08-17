@@ -1,5 +1,5 @@
 "use client";
-import logo from "../../public/assets/logo.png";
+// import logo from "../../public/assets/logo.png";
 import Image, { StaticImageData } from "next/image";
 
 // Define the type for the project
@@ -29,14 +29,14 @@ const Experience: React.FC = () => {
 
       <div className="border border-white rounded-lg p-3">
         {/* Heading and Image Row */}
-        <div className="flex items-center gap-4">
+        {/* <div className="flex items-center gap-4">
           <Image
             src={project.image}
             alt={project.title}
             className="w-24 h-24 object-contain"
           />
           <h3 className="text-2xl font-semibold">{project.title}</h3>
-        </div>
+        </div> */}
 
         {/* Content Section */}
         <div className=" text-left">
