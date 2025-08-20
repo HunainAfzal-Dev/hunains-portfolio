@@ -44,9 +44,9 @@ const Experience: React.FC = () => {
           <p className=" mt-4">{project.desc}</p>
           <div className="mt-4 text-sm text-gray-400 space-y-1">
             <p>
-              <strong>Start Date:</strong> {project.startDate}
+              <strong>Start-Date:</strong> {project.startDate}
             </p>
-            <p><strong>End Date:</strong> {project.endDate}</p>
+            <p><strong>End-Date:</strong> {project.endDate}</p>
           </div>
         </div>
       </div>
