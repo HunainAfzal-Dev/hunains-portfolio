@@ -110,19 +110,20 @@ const About = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 min-h-screen">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 min-h-screen">
+      <div className="container mx-auto px-4 max-w-7xl" style={{ backgroundColor: 'transparent' }}>
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
+          style={{ color: '#131E25' }}
         >
-          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text text-transparent mb-6">
             About Me
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             Passionate developer crafting digital experiences that make a difference
           </p>
         </motion.div>
@@ -136,7 +137,7 @@ const About = () => {
         >
           <motion.div variants={itemVariants} className="relative">
             <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl transform rotate-3"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-400 rounded-3xl transform rotate-3"></div>
               <div className="relative bg-white p-2 rounded-3xl shadow-2xl">
                 <Image
                   src={profileImage}
@@ -155,7 +156,7 @@ const About = () => {
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h2 className="text-4xl font-bold text-gray-900">
-              Hi, I'm <span className="text-blue-600">Your Name</span>
+              Hi, I'm <span className="text-orange-500">Your Name</span>
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
               A passionate full-stack developer with over 5 years of experience creating 
@@ -173,7 +174,7 @@ const About = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="bg-gradient-to-r from-orange-500 to-amber-400 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 Get In Touch
               </motion.a>
@@ -182,7 +183,7 @@ const About = () => {
                 whileTap={{ scale: 0.95 }}
                 href="/resume.pdf"
                 target="_blank"
-                className="border-2 border-blue-500 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all"
+                className="border-2 border-orange-500 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-all"
               >
                 Download CV
               </motion.a>
@@ -207,7 +208,7 @@ const About = () => {
                 initial={{ scale: 0 }}
                 animate={isInView ? { scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-4xl font-bold text-blue-600 mb-2"
+                className="text-4xl font-bold text-orange-500 mb-2"
               >
                 {stat.number}
               </motion.div>
@@ -237,7 +238,7 @@ const About = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 py-4 px-6 text-center font-semibold transition-all ${
                     activeTab === tab.id
-                      ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50'
+                      ? 'text-orange-600 border-b-2 border-orange-500 bg-orange-50'
                       : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -276,19 +277,19 @@ const About = () => {
                     <h4 className="text-xl font-semibold text-gray-900">What Drives Me</h4>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-blue-500 mr-2">•</span>
+                        <span className="text-orange-500 mr-2">•</span>
                         <span className="text-gray-600">Creating solutions that make a real impact</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 mr-2">•</span>
+                        <span className="text-orange-500 mr-2">•</span>
                         <span className="text-gray-600">Continuous learning and growth</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 mr-2">•</span>
+                        <span className="text-orange-500 mr-2">•</span>
                         <span className="text-gray-600">Building products that users love</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-blue-500 mr-2">•</span>
+                        <span className="text-orange-500 mr-2">•</span>
                         <span className="text-gray-600">Collaborating with amazing teams</span>
                       </li>
                     </ul>
@@ -319,7 +320,7 @@ const About = () => {
                           initial="hidden"
                           animate={isInView ? "visible" : "hidden"}
                           custom={skill.level}
-                          className="bg-gradient-to-r from-blue-500 to-purple-600 h-2.5 rounded-full"
+                          className="bg-gradient-to-r from-orange-500 to-amber-400 h-2.5 rounded-full"
                         />
                       </div>
                     </div>
@@ -345,7 +346,7 @@ const About = () => {
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                           <div>
                             <h4 className="text-xl font-semibold text-gray-900">{exp.title}</h4>
-                            <p className="text-blue-600 font-medium">{exp.company}</p>
+                            <p className="text-orange-600 font-medium">{exp.company}</p>
                           </div>
                           <span className="text-gray-500 bg-white px-3 py-1 rounded-full text-sm">
                             {exp.period}
@@ -378,14 +379,14 @@ const About = () => {
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Education & Certifications</h3>
                 <div className="space-y-6">
                   {education.map((edu, index) => (
-                    <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+                    <div key={index} className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-lg p-6">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
                         <h4 className="text-xl font-semibold text-gray-900">{edu.degree}</h4>
-                        <span className="text-blue-600 bg-white px-3 py-1 rounded-full text-sm font-medium">
+                        <span className="text-orange-600 bg-white px-3 py-1 rounded-full text-sm font-medium">
                           {edu.period}
                         </span>
                       </div>
-                      <p className="text-purple-600 font-medium mb-2">{edu.institution}</p>
+                      <p className="text-amber-600 font-medium mb-2">{edu.institution}</p>
                       <p className="text-gray-600">{edu.description}</p>
                     </div>
                   ))}
@@ -413,7 +414,7 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
+              className="bg-gradient-to-r from-orange-500 to-amber-400 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               Start a Conversation
             </motion.a>
@@ -421,7 +422,7 @@ const About = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#projects"
-              className="border-2 border-blue-500 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all"
+              className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-all"
             >
               View My Work
             </motion.a>
