@@ -110,7 +110,7 @@ const About = () => {
   };
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-br from-gray-50 via-white to-orange-50 min-h-screen">
+    <section ref={ref} className="py-20 min-h-screen">
       <div className="container mx-auto px-4 max-w-7xl" style={{ backgroundColor: 'transparent' }}>
         {/* Header Section */}
         <motion.div
@@ -155,16 +155,16 @@ const About = () => {
           </motion.div>
 
           <motion.div variants={itemVariants} className="space-y-6">
-            <h2 className="text-4xl font-bold text-gray-900">
+            <h2 className="text-4xl font-bold text-white">
               Hi, I'm <span className="text-orange-500">Your Name</span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               A passionate full-stack developer with over 5 years of experience creating 
               digital solutions that bridge the gap between design and functionality. 
               I specialize in building scalable web applications using modern technologies 
               and best practices.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               When I'm not coding, you'll find me exploring new technologies, contributing 
               to open-source projects, or sharing knowledge with the developer community.
             </p>
