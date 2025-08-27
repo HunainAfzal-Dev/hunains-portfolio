@@ -8,106 +8,106 @@ import Image from 'next/image';
 const profileImage = "/assets/profile.jpg"; // Add your profile image path
 
 const About = () => {
-  // const [activeTab, setActiveTab] = useState('story');
-  // const ref = useRef(null);
-  // const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const [activeTab, setActiveTab] = useState('story');
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, threshold: 0.1 });
 
-  // const skills = [
-  //   { name: 'Frontend Development', level: 95, category: 'technical' },
-  //   { name: 'React/Next.js', level: 90, category: 'technical' },
-  //   { name: 'UI/UX Design', level: 85, category: 'design' },
-  //   { name: 'Node.js', level: 80, category: 'technical' },
-  //   { name: 'TypeScript', level: 88, category: 'technical' },
-  //   { name: 'Figma', level: 82, category: 'design' },
-  //   { name: 'MongoDB', level: 75, category: 'technical' },
-  //   { name: 'Problem Solving', level: 92, category: 'soft' },
-  // ];
+  const skills = [
+    { name: 'Frontend Development', level: 95, category: 'technical' },
+    { name: 'React/Next.js', level: 90, category: 'technical' },
+    { name: 'UI/UX Design', level: 85, category: 'design' },
+    { name: 'Node.js', level: 80, category: 'technical' },
+    { name: 'TypeScript', level: 88, category: 'technical' },
+    { name: 'Figma', level: 82, category: 'design' },
+    { name: 'MongoDB', level: 75, category: 'technical' },
+    { name: 'Problem Solving', level: 92, category: 'soft' },
+  ];
 
-  // const experiences = [
-  //   {
-  //     title: 'Senior Full Stack Developer',
-  //     company: 'Tech Innovators Inc.',
-  //     period: '2022 - Present',
-  //     description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies.',
-  //     achievements: [
-  //       'Built and maintained 15+ production applications',
-  //       'Improved application performance by 40%',
-  //       'Mentored junior developers and conducted code reviews',
-  //     ]
-  //   },
-  //   {
-  //     title: 'Frontend Developer',
-  //     company: 'Digital Solutions Ltd.',
-  //     period: '2020 - 2022',
-  //     description: 'Developed responsive web applications and collaborated with design teams to create exceptional user experiences.',
-  //     achievements: [
-  //       'Developed 20+ responsive websites',
-  //       'Reduced page load times by 35%',
-  //       'Implemented modern CSS frameworks and animations',
-  //     ]
-  //   },
-  //   {
-  //     title: 'Junior Developer',
-  //     company: 'StartUp Ventures',
-  //     period: '2019 - 2020',
-  //     description: 'Started my journey in web development, working on various projects and learning modern technologies.',
-  //     achievements: [
-  //       'Learned React, Vue.js, and modern JavaScript',
-  //       'Contributed to open-source projects',
-  //       'Built first production application',
-  //     ]
-  //   }
-  // ];
+  const experiences = [
+    {
+      title: 'Senior Full Stack Developer',
+      company: 'Tech Innovators Inc.',
+      period: '2022 - Present',
+      description: 'Leading development of scalable web applications using React, Node.js, and cloud technologies.',
+      achievements: [
+        'Built and maintained 15+ production applications',
+        'Improved application performance by 40%',
+        'Mentored junior developers and conducted code reviews',
+      ]
+    },
+    {
+      title: 'Frontend Developer',
+      company: 'Digital Solutions Ltd.',
+      period: '2020 - 2022',
+      description: 'Developed responsive web applications and collaborated with design teams to create exceptional user experiences.',
+      achievements: [
+        'Developed 20+ responsive websites',
+        'Reduced page load times by 35%',
+        'Implemented modern CSS frameworks and animations',
+      ]
+    },
+    {
+      title: 'Junior Developer',
+      company: 'StartUp Ventures',
+      period: '2019 - 2020',
+      description: 'Started my journey in web development, working on various projects and learning modern technologies.',
+      achievements: [
+        'Learned React, Vue.js, and modern JavaScript',
+        'Contributed to open-source projects',
+        'Built first production application',
+      ]
+    }
+  ];
 
-  // const education = [
-  //   {
-  //     degree: 'Bachelor of Computer Science',
-  //     institution: 'University of Technology',
-  //     period: '2015 - 2019',
-  //     description: 'Specialized in Software Engineering and Web Technologies',
-  //   },
-  //   {
-  //     degree: 'Full Stack Web Development',
-  //     institution: 'Online Bootcamp',
-  //     period: '2019',
-  //     description: 'Intensive program covering modern web development stack',
-  //   }
-  // ];
+  const education = [
+    {
+      degree: 'Bachelor of Computer Science',
+      institution: 'University of Technology',
+      period: '2015 - 2019',
+      description: 'Specialized in Software Engineering and Web Technologies',
+    },
+    {
+      degree: 'Full Stack Web Development',
+      institution: 'Online Bootcamp',
+      period: '2019',
+      description: 'Intensive program covering modern web development stack',
+    }
+  ];
 
-  // const stats = [
-  //   { number: '50+', label: 'Projects Completed' },
-  //   { number: '5+', label: 'Years Experience' },
-  //   { number: '30+', label: 'Happy Clients' },
-  //   { number: '15+', label: 'Technologies' },
-  // ];
+  const stats = [
+    { number: '50+', label: 'Projects Completed' },
+    { number: '5+', label: 'Years Experience' },
+    { number: '30+', label: 'Happy Clients' },
+    { number: '15+', label: 'Technologies' },
+  ];
 
-  // const containerVariants = {
-  //   hidden: { opacity: 0 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       staggerChildren: 0.1,
-  //       duration: 0.6,
-  //     },
-  //   },
-  // };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        duration: 0.6,
+      },
+    },
+  };
 
-  // const itemVariants = {
-  //   hidden: { opacity: 0, y: 20 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: { duration: 0.6 },
-  //   },
-  // };
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 },
+    },
+  };
 
-  // const skillVariants = {
-  //   hidden: { width: 0 },
-  //   visible: (level: number) => ({
-  //     width: `${level}%`,
-  //     transition: { duration: 1, delay: 0.5, ease: "easeOut" },
-  //   }),
-  // };
+  const skillVariants = {
+    hidden: { width: 0 },
+    visible: (level: number) => ({
+      width: `${level}%`,
+      transition: { duration: 1, delay: 0.5, ease: "easeOut" },
+    }),
+  };
 
   return (
     // <section ref={ref} className="py-20 min-h-screen">
