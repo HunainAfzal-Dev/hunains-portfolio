@@ -1,11 +1,10 @@
 "use client";
 
 import React, { useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import Image from 'next/image';
 
-// You can replace this with your actual profile image
-const profileImage = "/assets/profile.jpg"; // Add your profile image path
+const profileImage = "/assets/profile.jpg"; 
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('story');
