@@ -4,6 +4,7 @@ import React, { useState, useEffect, useMemo, useCallback } from "react";
 import Image, { StaticImageData } from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperType } from "swiper";
 import { Navigation, Pagination, Thumbs, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -132,7 +133,7 @@ const Projects: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState<"newest" | "oldest" | "title">("newest");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
 
   // Memoized filtered and sorted items
   const filteredAndSortedItems = useMemo(() => {
