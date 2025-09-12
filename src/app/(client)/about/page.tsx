@@ -1,8 +1,8 @@
 "use client";
 
+import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
 
 // You can replace this with your actual profile image
 const profileImage = "/assets/profile.jpg"; // Add your profile image path
@@ -10,7 +10,7 @@ const profileImage = "/assets/profile.jpg"; // Add your profile image path
 const About = () => {
   const [activeTab, setActiveTab] = useState('story');
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, threshold: 0.1 });
+  const isInView = useInView(ref, { once: true, });
 
   const skills = [
     { name: 'Frontend Development', level: 95, category: 'technical' },
@@ -123,7 +123,7 @@ const About = () => {
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text text-transparent mb-6">
             About Me
           </h1>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
             Passionate developer crafting digital experiences that make a difference
           </p>
         </motion.div>
@@ -156,7 +156,7 @@ const About = () => {
 
           <motion.div variants={itemVariants} className="space-y-6">
             <h2 className="text-4xl font-bold text-white">
-              Hi, I'm <span className="text-orange-500">Your Name</span>
+              {"Hi, I'm "}<span className="text-orange-500">Hunain Afzal</span>
             </h2>
             <p className="text-lg text-white leading-relaxed">
               A passionate full-stack developer with over 5 years of experience creating 
@@ -165,8 +165,7 @@ const About = () => {
               and best practices.
             </p>
             <p className="text-lg text-white leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing 
-              to open-source projects, or sharing knowledge with the developer community.
+              {"When I'm not coding, you'll find me exploring new technologies, contributing  to open-source projects, or sharing knowledge with the developer community."}
             </p>
             
             <div className="flex flex-wrap gap-4 pt-4">
@@ -268,9 +267,7 @@ const About = () => {
                       as curiosity quickly became a passion.
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                      Over the years, I've had the privilege of working with startups and established 
-                      companies, each experience teaching me something new about problem-solving, 
-                      teamwork, and the ever-evolving tech landscape.
+                      {"Over the years, I've had the privilege of working with startups and established companies, each experience teaching me something new about problem-solving, teamwork, and the ever-evolving tech landscape."}
                     </p>
                   </div>
                   <div className="space-y-4">
@@ -308,7 +305,7 @@ const About = () => {
               >
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">Technical Skills</h3>
                 <div className="grid md:grid-cols-2 gap-8">
-                  {skills.map((skill, index) => (
+                  {skills.map((skill,) => (
                     <div key={skill.name} className="space-y-2">
                       <div className="flex justify-between items-center">
                         <span className="font-medium text-gray-700">{skill.name}</span>
@@ -403,11 +400,11 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-20"
         >
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">
-            Let's Create Something Amazing Together
+          <h3 className="text-3xl font-bold text-white mb-4">
+            {"Let's Create Something Amazing Together"}
           </h3>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            I'm always excited to work on new projects and collaborate with fellow creators.
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            {"I'm always excited to work on new projects and collaborate with fellow creators."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
@@ -421,7 +418,7 @@ const About = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#projects"
+              href="/all-projects"
               className="border-2 border-orange-500 text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-all"
             >
               View My Work
