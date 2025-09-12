@@ -18,8 +18,8 @@ interface SocialIcons {
 
 const SocialIcons: SocialIcons[] = [
   { name: "Facebook", icon: FaFacebookF, link: 'facebook.com' },
-  { name: "Linkdin", icon: IoLogoLinkedin, link: 'www.linkedin.com/in/hunain-arain-a7945b2b8' },
-  { name: "facebook", icon: FaSquareUpwork, link: 'https://www.upwork.com/freelancers/~0114d278f24ca7a2b4?mp_source=share' },
+  { name: "Linkdin", icon: IoLogoLinkedin, link: 'https://www.linkedin.com/in/hunain-arain-a7945b2b8/' },
+  { name: "Upwork", icon: FaSquareUpwork, link: 'https://www.upwork.com/freelancers/~0114d278f24ca7a2b4?mp_source=share' },
   { name: "Github", icon: FaGithub, link: 'https://github.com/HunainAfzal-Dev' },
 ]
 
