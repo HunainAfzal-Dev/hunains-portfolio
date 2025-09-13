@@ -11,7 +11,7 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
-  
+
 const handleInputChange = (
   e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 ) => {
@@ -38,7 +38,7 @@ const handleInputChange = (
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-orange-500 to-amber-400">
+    <div className="min-h-screen bg-white/5">
       {/* Main Content */}
       <main className="px-6 py-12">
         <div className="max-w-6xl mx-auto">
@@ -160,12 +160,12 @@ const handleInputChange = (
                   >
                     Schedule a Call
                   </a>
-                  <a 
+                  {/* <a 
                     href="#portfolio" 
                     className="border border-white/30 hover:bg-white/10 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     View Portfolio
-                  </a>
+                  </a> */}
                 </div>
               </div>
 
