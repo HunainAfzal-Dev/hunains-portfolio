@@ -19,14 +19,14 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="bg-card rounded-lg shadow-2xl p-8">
               <h2 className="text-3xl font-bold text-card-foreground mb-6">Send a Message</h2>
-              {/* <ContactForm /> */}
+              {/* ContactForm */}
             </div>
 
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8">
                 <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                {/* <ContactInfo /> */}
+                {/*ContactInfo */}
               </div>
 
               {/* Quick Contact Cards */}
