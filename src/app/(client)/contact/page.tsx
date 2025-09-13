@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
@@ -10,14 +11,18 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
+  
+const handleInputChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  const { name, value } = e.target;
+  setFormData(prev => ({
+    ...prev,
+    [name]: value,
+  }));
+};
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+
 
   const handleSubmit = async () => {
     setIsSubmitting(true);
