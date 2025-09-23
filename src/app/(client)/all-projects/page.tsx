@@ -98,16 +98,7 @@ const portfolioItems: PortfolioItem[] = [
     year: "2023",
     client: "Gourmet Foods",
   },
-  {
-    id: 7,
-    category: "books",
-    title: "Digital Magazine",
-    description: "Interactive digital magazine with multimedia content.",
-    images: [panda, welcomeFuel, Atai],
-    technologies: ["InDesign", "HTML5", "CSS3"],
-    year: "2024",
-    client: "Publishing House",
-  },
+
 ];
 
 // Filter categories with counts
