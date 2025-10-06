@@ -16,6 +16,7 @@ import Kurani from "../../public/assets/kurani-page.jpeg";
 import unitedShop from "../../public/assets/unitedshop.jpeg";
 import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
+import cleaningExpert from "../../public/assets/cleaning-expert.png";
 
 // Enhanced portfolio item type
 type PortfolioItem = {
@@ -51,17 +52,17 @@ const portfolioItems: PortfolioItem[] = [
     title: "United Shop – WordPress eCommerce Website",
     description: "Developed a dynamic eCommerce website for United Shop using WordPress. Implemented custom features with HTML, CSS, and JavaScript to enhance user experience and functionality beyond standard plugins. Fully responsive and tailored to the client’s business needs.",
     images: [unitedShop],
-    link: "https://example.com",
-    technologies: ["React", "D3.js", "PostgreSQL"],
+    link: "https://unitedshoppe.site/",
+    technologies: ["Wordpress", "WooCommerce", "HTML", "CSS", "JavaScript"],
     year: "2024",
     client: "Retail Solutions",
   },
   {
     id: 3,
-    category: "branding",
-    title: "Brand Identity System",
-    description: "Complete brand identity package including logo, typography, and visual guidelines.",
-    images: [Atai, welcomeFuel, panda],
+    category: "Wordpress",
+    title: "Cleaning Expert pk - Wordpres website for a cleaning company.",
+    description: "Developed a modern and responsive WordPress website for a cleaning services company offering home cleaning, office cleaning, tank cleaning, and more. The site features user-friendly navigation, service pages, contact form integration, and a clean, professional design tailored to their brand.",
+    images: [cleaningExpert],
     link: "https://example.com",
     technologies: ["Adobe Creative Suite", "Figma"],
     year: "2023",
