@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import "swiper/css/effect-fade";
 import panda from "../../public/assets/project1.png";
+import Kurani from "../../public/assets/kurani-page.jpeg";
 import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
 
@@ -33,14 +34,14 @@ type PortfolioItem = {
 const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    category: "app",
-    title: "Mobile Banking App",
-    description: "A comprehensive banking application with modern UI/UX and secure transaction features.",
-    images: [panda, welcomeFuel, Atai],
-    link: "https://example.com",
-    technologies: ["React Native", "Node.js", "MongoDB"],
+    category: "Wordpress",
+    title: "Kurani Group – WordPress Website",
+    description: "Built a custom WordPress website for Kurani Group, a US-based franchise and real estate firm. Completed during my time at Kaj Consultancy with tailored design and features using HTML, CSS, and JavaScript.",
+    images: [Kurani],
+    link: "https://kurani.zenkode.tech/",
+    technologies: ["Wordpress", "HTML", "CSS", "JavaScript", ],    
     year: "2024",
-    client: "FinTech Corp",
+    client: "",
     featured: true,
   },
   {
