@@ -13,6 +13,7 @@ import "swiper/css/thumbs";
 import "swiper/css/effect-fade";
 import panda from "../../public/assets/project1.png";
 import Kurani from "../../public/assets/kurani-page.jpeg";
+import unitedShop from "../../public/assets/unitedshop.jpeg";
 import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
 
@@ -42,14 +43,14 @@ const portfolioItems: PortfolioItem[] = [
     technologies: ["Wordpress", "HTML", "CSS", "JavaScript", ],    
     year: "2024",
     client: "",
-    featured: true,
+    featured: false,
   },
   {
     id: 2,
-    category: "product",
-    title: "E-commerce Dashboard",
-    description: "Advanced analytics dashboard for online retailers with real-time data visualization.",
-    images: [welcomeFuel, panda, Atai],
+    category: "Wordpress",
+    title: "United Shop – WordPress eCommerce Website",
+    description: "Developed a dynamic eCommerce website for United Shop using WordPress. Implemented custom features with HTML, CSS, and JavaScript to enhance user experience and functionality beyond standard plugins. Fully responsive and tailored to the client’s business needs.",
+    images: [unitedShop],
     link: "https://example.com",
     technologies: ["React", "D3.js", "PostgreSQL"],
     year: "2024",
