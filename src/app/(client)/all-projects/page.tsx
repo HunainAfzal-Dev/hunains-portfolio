@@ -69,17 +69,6 @@ const portfolioItems: PortfolioItem[] = [
     client: "StartUp Inc",
     featured: true,
   },
-  {
-    id: 4,
-    category: "app",
-    title: "Fitness Tracking App",
-    description: "Comprehensive fitness application with workout plans and progress tracking.",
-    images: [panda, Atai, welcomeFuel],
-    link: "https://example.com",
-    technologies: ["Flutter", "Firebase", "ML Kit"],
-    year: "2024",
-    client: "HealthTech Solutions",
-  },
 ];
 
 // Filter categories with counts
