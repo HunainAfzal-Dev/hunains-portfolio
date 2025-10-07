@@ -80,28 +80,6 @@ const portfolioItems: PortfolioItem[] = [
     year: "2024",
     client: "HealthTech Solutions",
   },
-  {
-    id: 5,
-    category: "product",
-    title: "SaaS Platform",
-    description: "Cloud-based project management platform for enterprise clients.",
-    images: [welcomeFuel, Atai, panda],
-    link: "https://example.com",
-    technologies: ["Vue.js", "Express", "AWS"],
-    year: "2023",
-    client: "Enterprise Corp",
-  },
-  {
-    id: 6,
-    category: "branding",
-    title: "Restaurant Brand Package",
-    description: "Complete branding solution for modern restaurant chain.",
-    images: [Atai, panda, welcomeFuel],
-    technologies: ["Illustrator", "Photoshop", "InDesign"],
-    year: "2023",
-    client: "Gourmet Foods",
-  },
-
 ];
 
 // Filter categories with counts
