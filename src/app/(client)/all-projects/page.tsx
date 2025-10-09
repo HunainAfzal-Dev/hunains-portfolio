@@ -11,12 +11,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/thumbs";
 import "swiper/css/effect-fade";
-import panda from "../../public/assets/project1.png";
 import Kurani from "../../public/assets/kurani-page.jpeg";
 import unitedShop from "../../public/assets/unitedshop.jpeg";
+import cleaningExpert from "../../public/assets/cleaning-expert.png";
+import Vaporize from "../../public/assets/vaporize.png";
+import Atlas from "../../public/assets/atlas.jpg";
 import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
-import cleaningExpert from "../../public/assets/cleaning-expert.png";
+import panda from "../../public/assets/project1.png";
 
 // Enhanced portfolio item type
 type PortfolioItem = {
@@ -63,9 +65,33 @@ const portfolioItems: PortfolioItem[] = [
     title: "Cleaning Expert pk - Wordpres website for a cleaning company.",
     description: "Developed a modern and responsive WordPress website for a cleaning services company offering home cleaning, office cleaning, tank cleaning, and more. The site features user-friendly navigation, service pages, contact form integration, and a clean, professional design tailored to their brand.",
     images: [cleaningExpert],
-    link: "https://example.com",
-    technologies: ["Adobe Creative Suite", "Figma"],
-    year: "2023",
+    link: "https://cleaningexpertpk.com/",
+    technologies: ["Wordpress", "HTML", "CSS", "JavaScript"],
+    year: "2024",
+    client: "StartUp Inc",
+    featured: true,
+  },
+  {
+    id: 4,
+    category: "Wordpress",
+    title: "Vaporizeus - WordPress E-Commerce Website for Vape Products",
+    description: "Vaporizeus is a WordPress e-commerce website designed for selling vape products. It features advanced plugins for a secure, user-friendly shopping experience, with customizable product pages, integrated payment gateways, product filtering, customer reviews, and automated inventory management. Ideal for vape store owners looking to boost their online presence.",
+    images: [Vaporize],
+    link: "https://vaporizeus.com/",
+    technologies: ["Wordpress", "WooCommerce", "HTML", "CSS", "JavaScript"],
+    year: "2024",
+    client: "StartUp Inc",
+    featured: true,
+  },
+  {
+    id: 5,
+    category: "React",
+    title: "Company Portfolio Website | React, Vite.js, Tailwind CSS",
+    description: "Developed a dynamic company portfolio using React and Vite.js styled with Tailwind CSS and enhanced with Material UI components. Implemented Swiper.js for smooth carousels and managed global state efficiently with Redux.",
+    images: [Atlas],
+    link: "https://shirazlakhani.com/",
+    technologies: ["Wordpress", "WooCommerce", "HTML", "CSS", "JavaScript"],
+    year: "2024",
     client: "StartUp Inc",
     featured: true,
   },
