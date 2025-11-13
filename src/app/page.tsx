@@ -12,7 +12,7 @@ export default function Home() {
 
     <div className=" h-full overflow-scroll relative" style={{ scrollbarWidth: "none" }}>
       <h1
-        className="text-white w-full  bg-white/5 text-xl md:text-2xl rounded-xl p-2 outline-1 font-medium fixed z-10">
+        className="text-white w-full  bg-[#131E25] text-xl md:text-2xl rounded-xl p-2 outline-1 font-medium fixed z-10">
         Crafting pixel-perfect interfaces and bringing designs to life, one line
         of code at a time.
       </h1>
