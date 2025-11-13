@@ -398,7 +398,7 @@ const downloadCV = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="#contact"
+              href="/contact"
               className="bg-gradient-to-r from-orange-500 to-amber-400 text-white px-8 py-4 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all"
             >
               Start a Conversation
