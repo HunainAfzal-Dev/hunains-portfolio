@@ -37,11 +37,11 @@ export default function RootLayout({
           }}
           className={`${geistSans.variable} ${geistMono.variable} antialiased  `}
         >
-          <div className="h-screen  md:flex w-full p-3 md:p-8 ">
+          <div className="h-screen  md:flex w-full p-3 md:p-4">
             <div className="md:w-1/4 w-full   backdrop-blur-md bg-white/5 rounded-xl ">
               <Sidebar />
             </div>
-            <div className="md:w-[80%] flex flex-col gap-4 md:px-4">
+            <div className="md:w-[80%] flex flex-col gap-4 md:px-2">
               <div className="h-[10%]  w-[100%]  backdrop-blur-md bg-white/5 rounded-xl">
                 <Navbar />
               </div>
