@@ -5,7 +5,7 @@ import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 
 // You can replace this with your actual profile image
-// const profileImage = "/assets/profile.png"; // Add your profile image path
+const profileImage = "/public/assets/profile.png"; // Add your profile image path
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('story');
@@ -125,9 +125,9 @@ const downloadCV = () => {
           <motion.div variants={itemVariants} className="relative">
             <div className="relative w-full max-w-md mx-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-400 rounded-3xl transform rotate-3"></div>
-              <div className="relative bg-white p-2 rounded-3xl shadow-2xl">
-                <Image
-                  src={"/assets/profile.png"}
+              <div className="relative bg-white p-2 rounded-3xl shadow-2xl h-full">
+                {/* <Image
+                  src={profileImage}
                   alt="Profile"
                   width={400}
                   height={500}
@@ -136,7 +136,7 @@ const downloadCV = () => {
                     // Fallback if image doesn't exist
                     e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDQwMCA1MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iNTAiIGZpbGw9IiM5Q0EzQUYiLz4KPHBhdGggZD0iTTEwMCAzNTBDMTAwIDMwMCAxNDUgMjUwIDIwMCAyNTBTMzAwIDMwMCAzMDAgMzUwVjQwMEgxMDBWMzUwWiIgZmlsbD0iIzlDQTNBRiIvPgo8L3N2Zz4K';
                   }}
-                />
+                /> */}
               </div>
             </div>
           </motion.div>
