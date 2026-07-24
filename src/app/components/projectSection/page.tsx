@@ -6,6 +6,7 @@ import welcomeFuel from "../../public/assets/project5.png";
 import Atai from "../../public/assets/atai.png";
 import kurani from "../../public/assets/kurani.png";
 import kaj from "../../public/assets/kaj.png";
+import Cleaningexpertpk from "../../public/assets/Cleaningexpertpk.png"
 
 import { StaticImageData } from "next/image";
 import { HiOutlineViewfinderCircle } from "react-icons/hi2";
@@ -25,14 +26,21 @@ const RecentProjects: React.FC = () => {
   const projects: Project[] = [
     {
       title: "Welcome Fuels – WordPress Website",
-      role: "Frontend Developer",
+      role: "Developer",
       Link: "https://welcomefuels.com/",
       desc: "Website for Welcome Fuels, a US-based fueling company. This project, completed during my time at 'Kaj Consultancy', showcases various services through a custom post-type setup, ensuring easy content management. The website is designed for a seamless user experience, highlighting the company's offerings effectively",
       image: welcomeFuel,
     },
     {
+      title: "Cleaning Expert pk - Wordpres website",
+      role: "Developer",
+      Link: "https://cleaningexpertpk.com/",
+      desc: "Developed a modern and responsive WordPress website for a cleaning services company offering home cleaning, office cleaning, tank cleaning, and more. The site features user-friendly navigation, service pages, contact form integration, and a clean, professional design tailored to their brand.",
+      image: Cleaningexpertpk,
+    },
+    {
       title: "Pandaplcement – Job portal Website",
-      role: "Frontend Developer",
+      role: "Developer",
       Link: "https://pandaplacement.com/#/home",
       desc: `In my recent projects at 'Kaj Consulatancy', we developed a job portal that efficiently connects job seekers and employers. I created user-friendly interfaces for profile building, CV generation, and job applications. Employers can create profiles, post jobs, and manage applications. The project is nearing completion and is set to meet all client requirements, positioning it for a successful launch. Must vist`,
       image: panda,
